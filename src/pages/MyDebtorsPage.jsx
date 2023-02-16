@@ -26,7 +26,7 @@ const MyDebtors = () => {
 
   async function handleRemoveDebt(idConnection, idDebt){
     const token = localStorage.getItem("token");
-    const response = await fetch(`http://localhost:3000/connection/removeDebt/${idConnection}/${idDebt}`,
+    const response = await fetch(import.meta.env.VITE_BACKEND+`/connection/removeDebt/${idConnection}/${idDebt}`,
     {
       method:'DELETE',
       headers: {
@@ -49,7 +49,7 @@ const MyDebtors = () => {
 
 
     const token = localStorage.getItem("token");
-      const response = await fetch('http://localhost:3000/connection/addDebt/'+idConnection,
+      const response = await fetch(import.meta.env.VITE_BACKEND+'/connection/addDebt/'+idConnection,
       {
         method:'POST',
         headers: {

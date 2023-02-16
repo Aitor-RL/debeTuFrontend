@@ -5,7 +5,7 @@ const ConnectToCreditor = () =>{
     async function handleSubmit(e){
         e.preventDefault()
         const token = localStorage.getItem("token");
-        const response = await fetch(import.meta.env.VITE_BACKEND+'/connectToCreditor/'+email,
+        const response = await fetch(import.meta.env.VITE_BACKEND+'/connection/connectToCreditor/'+email,
         {
             method: "POST",
             headers: {
