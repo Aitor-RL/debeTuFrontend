@@ -8,7 +8,7 @@ const UserList = () => {
     useEffect(()=>{
         async function callApi(){
             setLoading(true)
-            const request = await fetch('http://localhost:3000/user/')
+            const request = await fetch(import.meta.env.VITE_BACKEND+'/user/')
             const json = await request.json()
             setUsers(json)
             setLoading(false)

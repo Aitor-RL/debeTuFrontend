@@ -9,7 +9,7 @@ const useUsers = () => {
         useEffect(()=>{
             async function callApi(){
                 setLoading(true)
-                const request = await fetch('http://localhost:3000/user/')
+                const request = await fetch(import.meta.env.VITE_BACKEND+'/user/')
                 if(!request.ok) setError ('Fallo al conectarme con laAPI')
                 const json = await request.json()
                 setUsers(json)

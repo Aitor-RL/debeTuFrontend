@@ -9,7 +9,7 @@ const UserForm = () => {
 
     async function handleSubmit(e){
         e.preventDefault()
-        const response = await fetch('http://localhost:3000/user',
+        const response = await fetch(import.meta.env.VITE_BACKEND+'/user',
         {
           method:'POST',
           headers: {

@@ -10,7 +10,7 @@ const Login = () =>{
 
     async function handleSubmit(e){
         e.preventDefault()
-        const response = await fetch('http://localhost:3000/auth/login',
+        const response = await fetch(import.meta.env.VITE_BACKEND+'/login',
         {
           method:'POST',
           headers: {

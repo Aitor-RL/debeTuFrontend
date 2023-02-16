@@ -7,7 +7,7 @@ const Me = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     async function call() {
-      const response = await fetch("http://localhost:3000/user/me", {
+      const response = await fetch(import.meta.env.VITE_BACKEND+"/me", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
