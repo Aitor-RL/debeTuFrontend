@@ -44,7 +44,7 @@ const Messages = () => {
             <form onSubmit={handleSubmit}>
                 <input type="text" name="msg" 
                 value={msg} onChange={(e)=>setMsg(e.target.value)}/>
-                <button type="submit">Enviar</button>
+                <button  className="m-auto mb-5 w-52 text-center text-xs  mt-7 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-full bg-green-300" type="submit">Enviar</button>
             </form>
 
         </>
